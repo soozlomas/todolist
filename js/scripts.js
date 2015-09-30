@@ -1,35 +1,52 @@
 $(document).ready(function(){
 
+  var itemnumber = 0;
+
   console.log("1");
 
-  $("#add").click(function(e) {
-    e.preventDefault();
+  $("#add").click(function(a) {
+    a.preventDefault();
 
-    console.log("2");
+    itemnumber += 1;
 
-    console.log($("#entry").val());
+    var listItem =  '<li><span id="changeitem">' + $("#entry").val() +
+                    '</span><button id="remove' + itemnumber + '">remove</button>' +
+                    '<button id="edit' + itemnumber + '">edit</button>';
 
-    $("#things").append('<li>' + $("#entry").val() + '</li>');
+    $("#things").append(listItem);
 
-    console.log("3");
+    updateCount();
 
     $('#entry').val('');
 
-    var count = $('#things li').length;
 
-    $('#taskcount').html(count);
+    $('#remove' + itemnumber).click(function(a) {
+      $(a.currentTarget.parentNode).remove();
+      updateCount();
+
+    });
+
+    $('#edit' + itemnumber).click(function(a) {
+      $(a.currentTarget.parentNode).remove();
+
+    });
+
+    function updateCount() {
+      var count = $('#things li').length;
+      $('#taskcount').html(count);
+    }
 
   });
 
-  $("#clear").click(function(e) {
-    e.preventDefault();
+
+  $('#clear').click(function() {
 
     $('#things').html('');
-    $('#taskcount').html(0);    
+    $('#taskcount').html(0);
 
   });
 
-  $("#complete").click(function(e) {
+  $('#complete').click(function(e) {
     e.preventDefault();
 
   });
