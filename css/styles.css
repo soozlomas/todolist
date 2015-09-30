@@ -1,0 +1,49 @@
+* {
+  line-height: 140%;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  padding: 20px;
+}
+
+p {
+  line-height: 140%;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+}
+
+label {
+  line-height: 140%;
+  font-family: 'Karla', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+input {
+  color: #111;
+  /*font-family: 'Karla', sans-serif;
+  font-size: 16px;*/
+  padding: 5px;
+  margin: 10px;
+}
+
+button {
+  color: #000000;
+  padding: 5px;
+  margin: 10px;
+}
+
+ul {
+  padding-left: 15px;
+  line-height: 140%;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-style: italic;
+}
+
+#total {
+  padding: 10px 5px 10px 15px;
+  font-weight: 700;
+}

@@ -10,14 +10,20 @@
 
   <body>
 
-    <fieldset>
       <form>
-        <input type="text" name="name" placeholder="To-do item"><input type="submit" value="Add to list">
+        <label>A to-do list</label><br>
+        <input id="entry" placeholder="To-do item">
+        <button id="add">Add to list</button>
         <br>
-        <input type="submit" value="Clear list"><input type="submit" value="Clear completed">
+        <ul id="things">
+        </ul>
+        <p id="total">Tasks to do: <span id="taskcount">0</span></p>
+        <button id="clear">Clear list</button>
+        <button id="complete">Clear completed</button>
       </form>
-    </fieldset>
 
+    <script src='http://code.jquery.com/jquery-latest.min.js'></script>
+		<script src="js/scripts.js"></script>
 
   </body>
 
